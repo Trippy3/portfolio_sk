@@ -6,6 +6,8 @@
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
+	import "remixicon/fonts/remixicon.css";
 </script>
 
 <!-- App Shell -->
@@ -14,36 +16,22 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase">Skeleton</strong>
+				<strong class="text-xl"><a href="/">Aviary</a></strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://discord.gg/EXqV7W8MtY"
-					target="_blank"
-					rel="noreferrer"
-				>
-					Discord
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://twitter.com/SkeletonUI"
-					target="_blank"
-					rel="noreferrer"
-				>
-					Twitter
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://github.com/skeletonlabs/skeleton"
-					target="_blank"
-					rel="noreferrer"
-				>
-					GitHub
+				<LightSwitch />
+				<!-- TODO: fix href link -->
+				<a href="https://github.com/Trippy3" class="btn variant-filled" target="_blank" rel="noopener noreferrer">
+					<span><i class="ri-github-fill text-xl"></i></span>
+					<span>GitHub</span>
 				</a>
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
-	<!-- Page Route Content -->
+
 	<slot />
+
+	<svelte:fragment slot="pageFooter">
+		<p class="flex justify-center items-center py-4">© 2023 hiro-torii.</p>
+	</svelte:fragment>
 </AppShell>
