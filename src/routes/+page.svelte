@@ -100,16 +100,19 @@
 		</div>
 
 		<h2 class="text-left">GitHub</h2>
-		<div class="card variant-filled-surface p-4 sm:flex flex-row flex-wrap">
-			<div class="flex base-1/2 m-2">
+		<div class="card variant-filled-surface p-4 sm:grid gap-2 grid-cols-2 justify-items-center">
+			<div class="base-1/2 m-2">
 				<a href="https://github.com/Trippy3" target="_blank" rel="noopener noreferrer">
 					<img alt="github-top-commit" class="w-80"  src="https://raw.githubusercontent.com/Trippy3/Trippy3/main/profile-summary-card-output/prussian/2-most-commit-language.svg"/>
 				</a>
 			</div>
-			<div class="flex base-1/2 m-2">
+			<div class="base-1/2 m-2">
 				<a href="https://github.com/Trippy3" target="_blank" rel="noopener noreferrer" class="flex base-1/2">
 					<img alt="github-stats" class="w-80"  src="https://raw.githubusercontent.com/Trippy3/Trippy3/main/profile-summary-card-output/prussian/3-stats.svg"/>
 				</a>
+			</div>
+			<div class="col-span-2 m-2">
+				<img alt="github-grass" src="https://grass-graph.appspot.com/images/Trippy3.png?width=870"/>
 			</div>
 		</div>
 	</section>

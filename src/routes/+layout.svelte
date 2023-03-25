@@ -21,7 +21,7 @@
 			<svelte:fragment slot="trail">
 				<LightSwitch />
 				<!-- TODO: fix href link -->
-				<a href="https://github.com/Trippy3" class="btn variant-filled" target="_blank" rel="noopener noreferrer">
+				<a href="https://github.com/Trippy3/portfolio_sk" class="btn variant-filled" target="_blank" rel="noopener noreferrer">
 					<span><i class="ri-github-fill text-xl"></i></span>
 					<span>GitHub</span>
 				</a>
