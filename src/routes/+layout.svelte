@@ -10,17 +10,14 @@
 	import "remixicon/fonts/remixicon.css";
 </script>
 
-<!-- App Shell -->
 <AppShell>
 	<svelte:fragment slot="header">
-		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
 				<strong class="text-xl"><a href="/">Aviary</a></strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<LightSwitch />
-				<!-- TODO: fix href link -->
 				<a href="https://github.com/Trippy3/portfolio_sk" class="btn variant-filled" target="_blank" rel="noopener noreferrer">
 					<span><i class="ri-github-fill text-xl"></i></span>
 					<span>GitHub</span>
