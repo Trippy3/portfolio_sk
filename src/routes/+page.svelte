@@ -6,7 +6,7 @@
 	import qiita from '$lib/images/qiita.png';
 	import connpass from '$lib/images/connpass.png';
 	import IntersectionObserver from '$lib/components/IntersectionObserver.svelte'
-	import ZennCards from '$lib/components/ZennCards.svelte';
+	import ArticleCard from '$lib/components/ArticleCard.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 	// console.log("page1: ", data)
@@ -68,7 +68,7 @@
 		</div>
 		<div class="sm:flex flex-wrap">
 			{#each Array(3) as _, i}
-				<ZennCards delay={250 + 100*i} title={data.articles[i].title} pageLink={data.articles[i].pageLink} cardLink={data.articles[i].cardLink} />
+				<ArticleCard delay={250 + 100*i} title={data.zennArticles[i].title} pageLink={data.zennArticles[i].pageLink} cardLink={data.zennArticles[i].cardLink} />
 			{/each}
 		</div>
 
