@@ -10,7 +10,7 @@
 	import type { PageData } from './$types';
 	export let data: PageData;
 	// console.log("page1: ", data)
-	let sort: string = 'latest'
+	let sort: string = 'latest';
 </script>
 
 <svelte:head>
@@ -76,40 +76,9 @@
 			<h2 class="text-left mr-8">Qiita</h2>
 		</div>
 		<div class="sm:flex flex-wrap">
-			<!-- TODO: each文で各カードを生成 -->
-			<IntersectionObserver once let:intersecting top={-100}>
-				{#if intersecting}
-					<div class="card variant-filled-surface p-4 m-4 sm:mx-2 " transition:fly="{{delay: 250, x: 200}}">
-						<a href="https://qiita.com/hiro-torii/items/a917dd7b387815ecf3b4" target="_blank" rel="noopener noreferrer">
-							<img alt="qiita1" class="w-80"  src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9JUUzJTgwJTkwUHl0aG9uJUUzJTgwJTkxR2l0SHViJUUzJTgzJUFBJUUzJTgzJTlEJUUzJTgyJUI4JUUzJTgzJTg4JUUzJTgzJUFBJUUzJTgxJThCJUUzJTgyJTg5JUUzJTgzJTlFJUUzJTgzJUJDJUUzJTgyJUI4JUU2JUI4JTg4JUUzJTgxJUJGUHVsbC1SZXF1ZXN0JUUzJTgyJTkyJUU1JThGJTk2JUU1JUJFJTk3JUUzJTgwJTgxJUUzJTgzJUFBJUUzJTgzJUJDJUUzJTgzJTg5JUUzJTgyJUJGJUUzJTgyJUE0JUUzJTgzJUEwJUUzJTgyJTg0JUUzJTgyJUI1JUUzJTgyJUE0JUUzJTgyJUJBJUUzJTgyJTkyJUU1JThGJUFGJUU4JUE2JTk2JUU1JThDJTk2JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz01ZTVhYzY1MDYyYmNmODhhMDU1MWQ1OTgyMjYwMjBhOA&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwaGlyby10b3JpaSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9NTY4MDEyZDcyM2VlMmU4MmI4OGM0MTgxMDRkODc0MzU&blend-x=142&blend-y=491&blend-mode=normal&s=e771fc47d28650fcac7b30fb926e3ac9"/>
-						</a>
-					</div>
-				{:else}
-					<div class="h-48"></div>
-				{/if}
-			</IntersectionObserver>
-			<IntersectionObserver once let:intersecting top={-100}>
-				{#if intersecting}
-					<div class="card variant-filled-surface p-4 m-4 sm:mx-2" transition:fly="{{delay: 350, x: 200}}">
-						<a href="https://qiita.com/hiro-torii/items/4dec3ab09cdf866b8645" target="_blank" rel="noopener noreferrer">
-							<img alt="qiita2" class="w-80"  src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9VWJ1bnR1JTIwMjIuMDQlRTMlODElQUJVYnVudHUlMjBQcm8lRTMlODIlOTIlRTklODElQTklRTclOTQlQTglRTMlODElOTklRTMlODIlOEImdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtY2xpcD1lbGxpcHNpcyZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTNkNDgyZmE1ZmM5ZjVlOGU2MThjMDA2MWQ0OTAyOGRl&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwaGlyby10b3JpaSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9NTY4MDEyZDcyM2VlMmU4MmI4OGM0MTgxMDRkODc0MzU&blend-x=142&blend-y=491&blend-mode=normal&s=d75f83a948036f5f7ad234c847b50e3d"/>
-						</a>
-					</div>
-				{:else}
-					<div class="h-48"></div>
-				{/if}
-			</IntersectionObserver>
-			<IntersectionObserver once let:intersecting top={-100}>
-				{#if intersecting}
-					<div class="card variant-filled-surface p-4 m-4 sm:mx-2" transition:fly="{{delay: 450, x: 200}}">
-						<a href="https://qiita.com/hiro-torii/items/3327cdfe983729d4fce5" target="_blank" rel="noopener noreferrer">
-							<img alt="qiita3" class="w-80"  src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9JUUzJTgyJUE4JUUzJTgzJUIzJUUzJTgyJUI4JUUzJTgzJThCJUUzJTgyJUEyJUU3JUI1JTg0JUU3JUI5JTk0JUU1JTkwJTkxJUU0JUI4JThBJUUzJTgxJUFFJUUzJTgxJTlGJUUzJTgyJTgxJUUzJTgxJUFCJUU4JUExJThDJUUzJTgxJUEzJUUzJTgxJUE2JUUzJTgxJThEJUUzJTgxJTlGJUU2JTk2JUJEJUU3JUFEJTk2JUUzJTgxJUE4JUU2JThDJUFGJUUzJTgyJThBJUU4JUJGJTk0JUUzJTgyJThBJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz05MDEwMWIwNDg1ZmFjOTNhMWEwZmIwMmU1NTQxZmRiZA&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwaGlyby10b3JpaSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9NTY4MDEyZDcyM2VlMmU4MmI4OGM0MTgxMDRkODc0MzU&blend-x=142&blend-y=491&blend-mode=normal&s=9da15109a017a3a29ea41f89c513fed4"/>
-						</a>
-					</div>
-				{:else}
-					<div class="h-48"></div>
-				{/if}
-			</IntersectionObserver>
+			{#each Array(3) as _, i}
+				<ArticleCard delay={250 + 100*i} title={data.qiitaArticles[i].title} pageLink={data.qiitaArticles[i].pageLink} cardLink={data.qiitaArticles[i].cardLink} />
+			{/each}
 		</div>
 
 		<h2 class="text-left">GitHub</h2>
