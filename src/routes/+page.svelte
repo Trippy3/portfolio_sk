@@ -9,7 +9,7 @@
 	import ZennCards from '$lib/components/ZennCards.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
-	console.log("page1: ", data)
+	// console.log("page1: ", data)
 	let sort: string = 'latest'
 </script>
 
@@ -68,7 +68,7 @@
 		</div>
 		<div class="sm:flex flex-wrap">
 			{#each Array(3) as _, i}
-				<ZennCards delay={250 + 100*i} title="tbd" pageLink="https://zenn.dev/hiro_torii/articles/06d7e845e146ee" cardLink="https://res.cloudinary.com/zenn/image/upload/s---HahMiZJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25B6%2585%25E9%25AB%2598%25E9%2580%259FDataFrame%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2583%25BC%25E3%2580%258CPolars%25E3%2580%258D%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hiro-torii%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY3ZDA0YmVmOTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" />
+				<ZennCards delay={250 + 100*i} title={data.articles[i].title} pageLink={data.articles[i].pageLink} cardLink={data.articles[i].cardLink} />
 			{/each}
 		</div>
 
