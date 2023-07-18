@@ -5,6 +5,7 @@
 	import zenn from '$lib/images/zenn.svg';
 	import qiita from '$lib/images/qiita.png';
 	import connpass from '$lib/images/connpass.png';
+	import speakerdeck from '$lib/images/speakerdeck.png';
 	import IntersectionObserver from '$lib/components/IntersectionObserver.svelte'
 	import ArticleCard from '$lib/components/ArticleCard.svelte';
 	import type { PageData } from './$types';
@@ -52,6 +53,9 @@
 				<a href="https://connpass.com/user/tori_bird/" target="_blank" rel="noopener noreferrer" class="btn p-1">
 					<img src={connpass} alt="connpass" class="w-8"/>
 				</a>
+				<a href="https://speakerdeck.com/hiro_torii" target="_blank" rel="noopener noreferrer" class="btn p-1">
+					<img src={speakerdeck} alt="speakerdeck" class="w-8"/>
+				</a>
 			</div>
 		</div>
 	</section>
@@ -68,7 +72,7 @@
 		</div>
 		<div class="sm:flex flex-wrap">
 			{#each Array(3) as _, i}
-				<ArticleCard delay={250 + 100*i} title={data.zennArticles[i].title} pageLink={data.zennArticles[i].pageLink} cardLink={data.zennArticles[i].cardLink} />
+				<ArticleCard delay={50 + 100*i} title={data.zennArticles[i].title} pageLink={data.zennArticles[i].pageLink} cardLink={data.zennArticles[i].cardLink} />
 			{/each}
 		</div>
 
@@ -77,14 +81,14 @@
 		</div>
 		<div class="sm:flex flex-wrap">
 			{#each Array(3) as _, i}
-				<ArticleCard delay={250 + 100*i} title={data.qiitaArticles[i].title} pageLink={data.qiitaArticles[i].pageLink} cardLink={data.qiitaArticles[i].cardLink} />
+				<ArticleCard delay={50 + 100*i} title={data.qiitaArticles[i].title} pageLink={data.qiitaArticles[i].pageLink} cardLink={data.qiitaArticles[i].cardLink} />
 			{/each}
 		</div>
 
 		<h2 class="text-left">GitHub</h2>
 		<IntersectionObserver once let:intersecting top={-200}>
 			{#if intersecting}
-				<div class="card variant-filled-surface p-4 sm:grid gap-2 grid-cols-2 justify-items-center" in:fade="{{delay: 500, duration: 500}}">
+				<div class="card variant-filled-surface p-4 sm:grid gap-2 grid-cols-2 justify-items-center" in:fade="{{delay: 50, duration: 250}}">
 					<div class="base-1/2 m-2">
 						<a href="https://github.com/Trippy3" target="_blank" rel="noopener noreferrer">
 							<img alt="github-top-commit" class="w-80"  src="https://raw.githubusercontent.com/Trippy3/Trippy3/main/profile-summary-card-output/prussian/2-most-commit-language.svg"/>
@@ -96,7 +100,7 @@
 						</a>
 					</div>
 					<div class="col-span-2 m-2">
-						<img alt="github-grass" src="https://grass-graph.appspot.com/images/Trippy3.png?width=870"/>
+						<img alt="github-grass" src="https://raw.githubusercontent.com/Trippy3/Trippy3/main/profile-summary-card-output/prussian/0-profile-details.svg"/>
 					</div>
 				</div>
 			{:else}
