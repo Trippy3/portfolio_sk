@@ -28,12 +28,12 @@
 		"autoprefixer": "^10.4.14",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-svelte3": "^4.0.0",
+		"eslint-plugin-svelte": "^2.44.0",
 		"postcss": "^8.4.31",
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
-		"svelte": "^3.54.0",
+		"svelte": "^4.2.19",
 		"svelte-check": "^3.0.1",
 		"tailwindcss": "^3.2.7",
 		"tslib": "^2.4.1",
@@ -44,6 +44,7 @@
 	"type": "module",
 	"dependencies": {
 		"jsdom": "^21.1.1",
-		"remixicon": "^2.5.0"
+		"remixicon": "^2.5.0",
+		"svelte-i18n": "^4.0.0"
 	}
 }
