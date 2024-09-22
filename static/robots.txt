@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# 特定のディレクトリやページをクロール禁止にする場合は以下のように記述します
+# Disallow: /private/
+# Disallow: /tmp/
+# Disallow: /admin/
+
+# Optionally disallow certain file types
+# Disallow: /*.pdf$
+
+# 特定のクローラーに対して異なるルールを設定する場合は以下のように記述します
+# User-agent: Googlebot
+# Disallow: /no-google/
+
+# サイトマップの場所を指定することもできます
+# Sitemap: https://www.example.com/sitemap.xml
