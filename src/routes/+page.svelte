@@ -7,8 +7,8 @@
 	import qiita from '$lib/images/qiita.png';
 	import connpass from '$lib/images/connpass.png';
 	import speakerdeck from '$lib/images/speakerdeck.png';
-	import IntersectionObserver from '$lib/components/IntersectionObserver.svelte';
 	import ArticleCard from '$lib/components/ArticleCard.svelte';
+	import GitHubActivity from '$lib/components/GitHubActivity.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 	// console.log("page1: ", data)
@@ -111,12 +111,12 @@
 			</RadioGroup> -->
 		</div>
 		<div class="sm:flex flex-wrap">
-			{#each Array(3) as _, i}
+			{#each data.zennArticles.slice(0, 3) as article, i}
 				<ArticleCard
 					delay={50 + 100 * i}
-					title={data.zennArticles[i].title}
-					pageLink={data.zennArticles[i].pageLink}
-					cardLink={data.zennArticles[i].cardLink}
+					title={article.title}
+					pageLink={article.pageLink}
+					cardLink={article.cardLink}
 				/>
 			{/each}
 		</div>
@@ -125,57 +125,18 @@
 			<h2 class="h2 text-left mr-8">Qiita</h2>
 		</div>
 		<div class="sm:flex flex-wrap">
-			{#each Array(3) as _, i}
+			{#each data.qiitaArticles.slice(0, 3) as article, i}
 				<ArticleCard
 					delay={50 + 100 * i}
-					title={data.qiitaArticles[i].title}
-					pageLink={data.qiitaArticles[i].pageLink}
-					cardLink={data.qiitaArticles[i].cardLink}
+					title={article.title}
+					pageLink={article.pageLink}
+					cardLink={article.cardLink}
 				/>
 			{/each}
 		</div>
 
 		<h2 class="h2 text-left">GitHub</h2>
-		<IntersectionObserver once let:intersecting top={-200}>
-			{#if intersecting}
-				<div
-					class="card variant-filled-surface p-4 sm:grid gap-2 grid-cols-2 justify-items-center"
-					in:fade={{ delay: 50, duration: 250 }}
-				>
-					<div class="base-1/2 m-2 card-hover">
-						<a class="card" href="https://github.com/Trippy3" target="_blank" rel="noopener noreferrer">
-							<img
-								alt="github-top-commit"
-								class="w-80"
-								src="https://raw.githubusercontent.com/Trippy3/Trippy3/main/profile-summary-card-output/prussian/2-most-commit-language.svg"
-							/>
-						</a>
-					</div>
-					<div class="base-1/2 m-2 card-hover">
-						<a
-							href="https://github.com/Trippy3"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="flex base-1/2 card"
-						>
-							<img
-								alt="github-stats"
-								class="w-80"
-								src="https://raw.githubusercontent.com/Trippy3/Trippy3/main/profile-summary-card-output/prussian/3-stats.svg"
-							/>
-						</a>
-					</div>
-					<div class="col-span-2 m-2">
-						<img
-							alt="github-grass"
-							src="https://raw.githubusercontent.com/Trippy3/Trippy3/main/profile-summary-card-output/prussian/0-profile-details.svg"
-						/>
-					</div>
-				</div>
-			{:else}
-				<div class="h-[32rem]"></div>
-			{/if}
-		</IntersectionObserver>
+		<GitHubActivity delay={500} />
 	</section>
 	<section class="space-y-4 text-center my-10">
 		<h1 class="h1 text-left">
