@@ -11,7 +11,9 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<strong class="text-xl"><a href="/">Aviary</a></strong>
+				<strong class="text-xl"
+					><a class="hover:text-gray-400 dark:hover:text-gray-600" href="/">Aviary</a></strong
+				>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<LightSwitch />
