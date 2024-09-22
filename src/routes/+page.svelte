@@ -140,9 +140,7 @@
 	</section>
 	<section class="space-y-4 text-center my-10">
 		<h1 class="h1 text-left">
-			<a href="./blog" class="anchor"
-				>Blog</a
-			>
+			<a href="./blog" class="anchor">Blog</a>
 		</h1>
 		<hr class="!border-dashed !border-t-4" />
 		<p>Under construction...</p>
