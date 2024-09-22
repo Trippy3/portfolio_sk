@@ -10,10 +10,10 @@
 <IntersectionObserver once let:intersecting top={-100}>
 	{#if intersecting}
 		<div
-			class="card variant-filled-surface p-4 m-4 sm:mx-2"
+			class="card card-hover variant-filled-surface p-4 m-4 sm:mx-2"
 			transition:fly={{ delay: delay, x: 200 }}
 		>
-			<a href={pageLink} target="_blank" rel="noopener noreferrer">
+			<a class="card" href={pageLink} target="_blank" rel="noopener noreferrer">
 				<img alt={title} class="w-80" src={cardLink} />
 			</a>
 		</div>

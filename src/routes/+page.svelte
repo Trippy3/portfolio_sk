@@ -24,11 +24,13 @@
 	<meta property="og:image" content="https://avatars.githubusercontent.com/u/4991409?v=4" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@hirot_san" />
+	<title>Aviary</title>
+	<meta name="description" content="Portfolio Pages by hiro-torii" />
 </svelte:head>
 
 <div class="container h-full mx-auto flex justify-center items-center flex-col">
 	<section class="space-y-4 text-center my-10">
-		<h1 class="text-5xl font-bold text-left">About</h1>
+		<h1 class="h1 text-left">About</h1>
 		<hr class="!border-dashed !border-t-4" />
 		<div class="card variant-filled-surface p-4 sm:flex flex-row">
 			<div class="basis-1/4 m-4 justify-items-center">
@@ -39,7 +41,7 @@
 				/>
 			</div>
 			<div class="grow basis-3/4">
-				<h3 class="text-3xl divide-solid">hiro-torii (Trippy3)</h3>
+				<h3 class="h3 divide-solid">hiro-torii (Trippy3)</h3>
 				<hr class="!border-t-2 mx-4" />
 				<p class="p-2 text-left">
 					Engineering Managerっぽいことをしています。<br
@@ -98,11 +100,11 @@
 		</div>
 	</section>
 	<section class="space-y-4 text-center my-10">
-		<h1 class="text-5xl font-bold text-left">Activity</h1>
+		<h1 class="h1 text-left">Activity</h1>
 		<hr class="!border-dashed !border-t-4" />
 		<!-- TODO: ZennとQiitaはURLからhtmk->meta->ogタグをfetchする, 元となる各記事のアドレスを取ってくるスクリプトを別ファイルで作成 -->
 		<div class="flex flex-row">
-			<h2 class="text-4xl text-left mr-8">Zenn</h2>
+			<h2 class="h2 text-left mr-8">Zenn</h2>
 			<!-- <RadioGroup active="variant-filled-primary" hover="hover:variant-soft-primary" padding="px-2 py-1">
 				<RadioItem bind:group={sort} name="sort" value="latest"><p class="!text-sm">Latest</p></RadioItem>
 				<RadioItem bind:group={sort} name="sort" value="popular"><p class="!text-sm">Popular</p></RadioItem>
@@ -120,7 +122,7 @@
 		</div>
 
 		<div class="flex flex-row">
-			<h2 class="text-4xl text-left mr-8">Qiita</h2>
+			<h2 class="h2 text-left mr-8">Qiita</h2>
 		</div>
 		<div class="sm:flex flex-wrap">
 			{#each Array(3) as _, i}
@@ -133,15 +135,15 @@
 			{/each}
 		</div>
 
-		<h2 class="text-4xl text-left">GitHub</h2>
+		<h2 class="h2 text-left">GitHub</h2>
 		<IntersectionObserver once let:intersecting top={-200}>
 			{#if intersecting}
 				<div
 					class="card variant-filled-surface p-4 sm:grid gap-2 grid-cols-2 justify-items-center"
 					in:fade={{ delay: 50, duration: 250 }}
 				>
-					<div class="base-1/2 m-2">
-						<a href="https://github.com/Trippy3" target="_blank" rel="noopener noreferrer">
+					<div class="base-1/2 m-2 card-hover">
+						<a class="card" href="https://github.com/Trippy3" target="_blank" rel="noopener noreferrer">
 							<img
 								alt="github-top-commit"
 								class="w-80"
@@ -149,12 +151,12 @@
 							/>
 						</a>
 					</div>
-					<div class="base-1/2 m-2">
+					<div class="base-1/2 m-2 card-hover">
 						<a
 							href="https://github.com/Trippy3"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="flex base-1/2"
+							class="flex base-1/2 card"
 						>
 							<img
 								alt="github-stats"
@@ -176,8 +178,8 @@
 		</IntersectionObserver>
 	</section>
 	<section class="space-y-4 text-center my-10">
-		<h1 class="text-5xl font-bold text-left">
-			<a href="./blog" class="text-green-600 visited:text-purple-600 no-underline hover:underline"
+		<h1 class="h1 text-left">
+			<a href="./blog" class="anchor"
 				>Blog</a
 			>
 		</h1>
