@@ -23,9 +23,7 @@
 	}
 </script>
 
-<div
-	class="card card-hover variant-filled-surface p-4 m-4 sm:mx-2 h-48 w-80 relative overflow-hidden"
->
+<div class="card card-hover variant-filled-surface p-4 h-48 w-[340px] relative overflow-hidden">
 	{#if visible}
 		<div
 			class="absolute inset-0 flex items-center justify-center"
