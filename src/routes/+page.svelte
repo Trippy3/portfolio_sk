@@ -115,7 +115,7 @@
 					{/each}
 				</div>
 			</div>
-	
+
 			<div>
 				<h2 class="h2 text-left mb-4">Qiita</h2>
 				<div class="flex flex-wrap justify-center lg:justify-between gap-4">
@@ -129,7 +129,7 @@
 					{/each}
 				</div>
 			</div>
-	
+
 			<div>
 				<h2 class="h2 text-left mb-4">GitHub</h2>
 				<GitHubActivity delay={500} />
