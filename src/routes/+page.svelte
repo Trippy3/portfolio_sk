@@ -1,8 +1,6 @@
 <script lang="ts">
 	import '../app.postcss';
-	import { fly, fade } from 'svelte/transition';
 	import { Avatar } from '@skeletonlabs/skeleton';
-	import { RadioGroup, RadioItem } from '@skeletonlabs/skeleton';
 	import zenn from '$lib/images/zenn.svg';
 	import qiita from '$lib/images/qiita.png';
 	import connpass from '$lib/images/connpass.png';
@@ -99,44 +97,44 @@
 			</div>
 		</div>
 	</section>
-	<section class="space-y-4 text-center my-10">
+	<section class="space-y-4 text-center my-10 mx-4">
 		<h1 class="h1 text-left">Activity</h1>
 		<hr class="!border-dashed !border-t-4" />
 		<!-- TODO: ZennとQiitaはURLからhtmk->meta->ogタグをfetchする, 元となる各記事のアドレスを取ってくるスクリプトを別ファイルで作成 -->
-		<div class="flex flex-row">
-			<h2 class="h2 text-left mr-8">Zenn</h2>
-			<!-- <RadioGroup active="variant-filled-primary" hover="hover:variant-soft-primary" padding="px-2 py-1">
-				<RadioItem bind:group={sort} name="sort" value="latest"><p class="!text-sm">Latest</p></RadioItem>
-				<RadioItem bind:group={sort} name="sort" value="popular"><p class="!text-sm">Popular</p></RadioItem>
-			</RadioGroup> -->
-		</div>
-		<div class="sm:flex flex-wrap">
-			{#each data.zennArticles.slice(0, 3) as article, i}
-				<ArticleCard
-					delay={50 + 100 * i}
-					title={article.title}
-					pageLink={article.pageLink}
-					cardLink={article.cardLink}
-				/>
-			{/each}
-		</div>
+		<div class="space-y-8">
+			<div>
+				<h2 class="h2 text-left mb-4">Zenn</h2>
+				<div class="flex flex-wrap justify-center lg:justify-between gap-4">
+					{#each data.zennArticles.slice(0, 3) as article, i}
+						<ArticleCard
+							delay={50 + 100 * i}
+							title={article.title}
+							pageLink={article.pageLink}
+							cardLink={article.cardLink}
+						/>
+					{/each}
+				</div>
+			</div>
 
-		<div class="flex flex-row">
-			<h2 class="h2 text-left mr-8">Qiita</h2>
-		</div>
-		<div class="sm:flex flex-wrap">
-			{#each data.qiitaArticles.slice(0, 3) as article, i}
-				<ArticleCard
-					delay={50 + 100 * i}
-					title={article.title}
-					pageLink={article.pageLink}
-					cardLink={article.cardLink}
-				/>
-			{/each}
-		</div>
+			<div>
+				<h2 class="h2 text-left mb-4">Qiita</h2>
+				<div class="flex flex-wrap justify-center lg:justify-between gap-4">
+					{#each data.qiitaArticles.slice(0, 3) as article, i}
+						<ArticleCard
+							delay={50 + 100 * i}
+							title={article.title}
+							pageLink={article.pageLink}
+							cardLink={article.cardLink}
+						/>
+					{/each}
+				</div>
+			</div>
 
-		<h2 class="h2 text-left">GitHub</h2>
-		<GitHubActivity delay={500} />
+			<div>
+				<h2 class="h2 text-left mb-4">GitHub</h2>
+				<GitHubActivity delay={500} />
+			</div>
+		</div>
 	</section>
 	<section class="space-y-4 text-center my-10">
 		<h1 class="h1 text-left">
