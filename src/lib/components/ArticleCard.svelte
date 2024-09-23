@@ -2,6 +2,8 @@
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 
+	const articlePlaceholder: string = 'placeholder w-full h-full animate-pulse';
+
 	export let delay: number;
 	export let title: string;
 	export let pageLink: string;
@@ -37,7 +39,7 @@
 					rel="noopener noreferrer"
 				>
 					{#if !imageLoaded}
-						<div class="placeholder w-full h-full animate-pulse"></div>
+						<div class={articlePlaceholder}></div>
 					{/if}
 					<img
 						alt={title}
@@ -48,10 +50,10 @@
 					/>
 				</a>
 			{:else}
-				<div class="placeholder w-full h-full animate-pulse"></div>
+				<div class={articlePlaceholder}></div>
 			{/if}
 		</div>
 	{:else}
-		<div class="placeholder w-full h-full animate-pulse"></div>
+		<div class={articlePlaceholder}></div>
 	{/if}
 </div>
