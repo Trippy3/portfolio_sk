@@ -57,9 +57,7 @@ if (import.meta.vitest) {
 	describe('getZennArticles', () => {
 		it('match title', async () => {
 			const articles = await getZennArticles();
-			// console.log(articles);
-			// console.log(articles[0].pageLink);
-			expect(articles[0].title).toBe(
+			expect(articles[1].title).toBe(
 				'転職による引き継ぎを機に『勇気を持って手放す』経験がまがりなりにもできた話'
 			);
 		});
@@ -68,8 +66,6 @@ if (import.meta.vitest) {
 	describe('getQiitaArticles', () => {
 		it('match title', async () => {
 			const articles = await getQiitaArticles();
-			// console.log(articles);
-			// console.log(articles[0].pageLink);
 			expect(articles[0].title).toBe('"Python Polars: The Definitive Guide"への期待');
 		});
 	});
