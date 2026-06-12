@@ -1,6 +1,5 @@
 # My Portfolio Pages
 
-https://aviary.pages.dev/
 
 ## Using
 
